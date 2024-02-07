@@ -48,7 +48,7 @@
                 <div class="form-group">
                     <input id="txtUserName" runat="server" class="form-control" placeholder="User Name" name="email" autofocus>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUserName" Enabled="true"
-                                                Display="None" ValidationGroup="login" Text="Required" CssClass="mpr-validation-messages" />
+                                                Display="None" ValidationGroup="Login" Text="Required" CssClass="mpr-validation-messages" />
                 </div>
     
                 <div class="form-group">
@@ -57,14 +57,20 @@
                                                 Display="None" Text="Required" CssClass="mpr-validation-messages" />
                 </div>
 
-                <asp:LinkButton ID="lnkLogin" runat="server" style="background-color:#2ebf63;"  class="btn btn-lg btn-block" ValidationGroup="login"
-                OnClick="btnLogin_Click">Login</asp:LinkButton>
+                <asp:LinkButton ID="lnkLogin" runat="server" style="background-color:#2ebf63" class="btn btn-lg btn-block" ValidationGroup="login"
+                OnClick="btnLogin_Click">Ingresar</asp:LinkButton>
+                <br />
+                <div class="col-lg-12">
+                    <a class="nav-link" style="text-align:center" id="NewAccount" href="Login">¿Olvidó su contraseña?</a>
+                </div>
+                @* <asp:LinkButton ID="lnkLogin" runat="server" style="background-color:#2ebf63;" class="btn btn-lg btn-block" ValidationGroup="login"
+                                OnClick="btnLogin_Click">¿Olvidó su contraseña?</asp:LinkButton> *@
             </div>
 
                 </div>
             </div>
 
-    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+@*     <div class="row gx-4 gx-lg-5 align-items-center my-5">
 
         <div class="col-md-4 mb-6">
           <p1 class="mpr-title-header">
@@ -83,7 +89,7 @@
                 <a class="nav-link glyphicon glyphicon-trash" aria-hidden="true" href="Devices">
             </a>&nbsp;Equipo aprobado por remover</p1>
            </div>
-    </div>
+    </div> *@
     <br />
     <br />
     <br />
