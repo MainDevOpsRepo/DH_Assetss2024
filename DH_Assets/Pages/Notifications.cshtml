@@ -31,7 +31,7 @@
         <div class="container">
             <asp:LinqDataSource ID="Notifications" runat="server"
                                 ContextTypeName="Notifications"
-                                EnableDelete="False" EnableInsert="False" EnableUpdate="False"
+                                EnableDelete="true" EnableInsert="true" EnableUpdate="true"
                                 TableName="Notifications">
             </asp:LinqDataSource>
 
@@ -66,26 +66,6 @@
     <!-- Bootstrap core JS-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- Core theme JS-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const select = document.getElementById('TipoDispositivo');
-            select.addEventListener('change', function () {
-                const selectedOption = select.value;
-                const modalTarget = select.options[select.selectedIndex].getAttribute('data-modal-target');
-
-                // Close miModal3 if it's open
-                $('#miModal3').modal('hide');
-
-                if (modalTarget) {
-                    // Show miModal2
-                    $(modalTarget).modal('show');
-                }
-            });
-        });
-
-    </script>
 
 </body>
 </html>
