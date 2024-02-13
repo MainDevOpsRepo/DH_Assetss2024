@@ -10,4 +10,3 @@
             NotificationCount = 5; // For example
         }
     }
-}
