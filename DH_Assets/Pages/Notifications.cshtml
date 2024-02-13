@@ -27,16 +27,25 @@
                 </div>
             </div>
         </div>
+        <div>
+            @{
+                // Instantiate MyClass
+                var myClassInstance = new FEUtils();
 
+                // Call the method and display the result
+                var result = myClassInstance.NotificationGrid;
+            }
+            <p>@result</p>
+        </div>
         <div class="container">
-            <asp:LinqDataSource ID="Notifications" runat="server"
+            <asp:LinqDataSource ID="NotificationGrid" runat="server"
                                 ContextTypeName="Notifications"
-                                EnableDelete="true" EnableInsert="true" EnableUpdate="true"
+                                EnableDelete="True" EnableInsert="true" EnableUpdate="True"
                                 TableName="Notifications">
             </asp:LinqDataSource>
 
-            <asp:GridView ID="Notifications" runat="server"
-                          AutoGenerateColumns="False"
+            <asp:GridView ID="NotificationGrid" runat="server"
+                          AutoGenerateColumns="True"
                           DataKeyNames=""
                           DataSourceID="Notifications">
                 <Columns>
